@@ -1,0 +1,18 @@
+{
+  "name": "redux-date-range-picker-utils",
+  "version": "0.1.0",
+  "description": "Reducer, action-types, actions for custom date-range-picker components",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "redux",
+    "reducer",
+    "actions",
+    "action-types",
+    "date-range-picker"
+  ],
+  "author": "Oleksandr Bondarchuk <alex.coockoo@gmail.com> (https://github.com/coockoo)",
+  "license": "MIT"
+}
