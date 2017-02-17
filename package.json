@@ -1,6 +1,6 @@
 {
   "name": "redux-date-range-picker-utils",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Reducer, action-types, actions for custom date-range-picker components",
   "main": "src/index.js",
   "scripts": {

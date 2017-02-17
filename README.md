@@ -15,11 +15,11 @@ import { createActionTypes } from 'redux-date-range-picker-utils';
 const DATE_PICKER = createActionTypes('MY_DATE_PICKER');
 // =>
 // {
-//   DATE_FILTER_TOGGLE_DROPDOWN: 'MY_DATE_PICKER_DATE_FILTER_TOGGLE_DROPDOWN',
-//   DATE_FILTER_OPEN_DROPDOWN: 'MY_DATE_PICKER_DATE_FILTER_OPEN_DROPDOWN',
-//   DATE_FILTER_CLOSE_DROPDOWN: 'MY_DATE_PICKER_DATE_FILTER_CLOSE_DROPDOWN',
-//   DATE_FILTER_SHIFT_CURRENT_MONTH: 'MY_DATE_PICKER_DATE_FILTER_SHIFT_CURRENT_MONTH',
-//   DATE_FILTER_SELECT_DATE: 'MY_DATE_PICKER_DATE_FILTER_SELECT_DATE',
+//   DATE_PICKER_TOGGLE_DROPDOWN: 'MY_DATE_PICKER_DATE_PICKER_TOGGLE_DROPDOWN',
+//   DATE_PICKER_OPEN_DROPDOWN: 'MY_DATE_PICKER_DATE_PICKER_OPEN_DROPDOWN',
+//   DATE_PICKER_CLOSE_DROPDOWN: 'MY_DATE_PICKER_DATE_PICKER_CLOSE_DROPDOWN',
+//   DATE_PICKER_SHIFT_CURRENT_MONTH: 'MY_DATE_PICKER_DATE_PICKER_SHIFT_CURRENT_MONTH',
+//   DATE_PICKER_SELECT_DATE: 'MY_DATE_PICKER_DATE_PICKER_SELECT_DATE',
 // }
 export { DATE_PICKER };
 ```
@@ -29,7 +29,7 @@ export { DATE_PICKER };
 ```javascript
 import { createActions } from 'redux-date-range-picker-utils';
 import { DATE_PICKER } from './action-types';
-const actions = createActions(DATE_FILTER, { prefix: 'myCustomPrefix' } /* optional */);
+const actions = createActions(DATE_PICKER, { prefix: 'myCustomPrefix' } /* optional */);
 // =>
 //{
 //  myCustomPrefixToggleDropdown, or toggleDropdown
@@ -46,7 +46,7 @@ export default actions;
 ```javascript
 import { createReducer } from 'redux-date-range-picker-utils';
 import { DATE_PICKER, CUSTOM_ACTION_TYPE } from './action-types';
-const reducer = createReducer(DATE_FILTER, { 
+const reducer = createReducer(DATE_PICKER, { 
 	[CUSTOM_ACTION_TYPE]: customHandler /* optional */
 	[DATE_PICKER.TOGGLE_DROPDOWN]: customToggleDropdownHandler /* optional (overrides default one) */
 });
