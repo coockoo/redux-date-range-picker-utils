@@ -14,5 +14,8 @@
     "date-range-picker"
   ],
   "author": "Oleksandr Bondarchuk <alex.coockoo@gmail.com> (https://github.com/coockoo)",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "moment": "^2.17.1"
+  }
 }
