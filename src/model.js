@@ -11,14 +11,15 @@ function model () {
 		isDropdownOpen: false,
 		currentMonth: moment().subtract(1, 'days').month(),
 		currentYear: moment().subtract(1, 'days').year()
-
 	};
+
 	const methods = {
 		get, set,
 		toggle, open, close,
 		shiftCurrentMonth,
 		selectDate
 	};
+
 	return methods;
 
 	function get (field) {
@@ -49,7 +50,19 @@ function model () {
 		) {
 			return set({ selectedFrom: moment(date).format('YYYY-MM-DD'), selectedTo: null });
 		}
-		const newTo = moment(date).format('YYYY-MM-DD');
-		return set({ selectedTo: newTo, from: state.selectedFrom, to: newTo, isDropdownOpen: false });
+		let newTo = moment(date).format('YYYY-MM-DD');
+		let newFrom = state.selectedFrom;
+		if (moment(newFrom).isAfter(moment(newTo))) {
+			const temp = newFrom;
+			newFrom = newTo;
+			newTo = temp;
+		}
+		return set({
+			selectedFrom: newFrom,
+			selectedTo: newTo,
+			from: newFrom,
+			to: newTo,
+			isDropdownOpen: false
+		});
 	}
 }
