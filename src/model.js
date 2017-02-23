@@ -2,8 +2,8 @@ import moment from 'moment';
 
 export default model;
 
-function model () {
-	let state = {
+function model (preloadedState) {
+	let state = Object.assign({
 		from: null,
 		to: null,
 		selectedFrom: null,
@@ -11,7 +11,7 @@ function model () {
 		isDropdownOpen: false,
 		currentMonth: moment().subtract(1, 'days').month(),
 		currentYear: moment().subtract(1, 'days').year()
-	};
+	}, preloadedState);
 
 	const methods = {
 		get, set,
