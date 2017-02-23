@@ -17,7 +17,8 @@ function model (preloadedState) {
 		get, set,
 		toggle, open, close,
 		shiftCurrentMonth,
-		selectDate
+		selectDate,
+		toJSON
 	};
 
 	return methods;
@@ -64,5 +65,8 @@ function model (preloadedState) {
 			to: newTo,
 			isDropdownOpen: false
 		});
+	}
+	function toJSON () {
+		return state;
 	}
 }
